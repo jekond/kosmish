@@ -1,3 +1,9 @@
+'''
+Игровой файл, отвечающий за механику и реализацию космических тел (на данный момент это только планеты, хотя в задумке было
+добавить сюда Солнце и Спутники.
+При запуске программы просходит расчет и заполнение списков кооринатами планет. За однову была взята пошаговость с интервалом в один день.
+'''
+
 import math
 import ship
 import details
@@ -77,4 +83,5 @@ Uranus.pl_fly(0)
 Neptune.pl_data_coord=start_data    
 Neptune.pl_fly(0)
 
-button_list = [Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune]
+
+button_list = [Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune]#Необходимо в файле grafon
