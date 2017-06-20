@@ -16,6 +16,10 @@ class SpaseShip:
         self.position[0]=navigation.Earth.position[0]
         self.position[1]=navigation.Earth.position[1]
         #self.s_shel=details.Shell_1
+        '''
+        Идея была в том, что начинать игру можно будет на любой планете. По факту же вышел костыль, который помогает найти Землю
+        после выполнения стартовых функций файла navigation
+        '''
 
     def change_shell(self,xyz):
         if(xyz=='x' and self.s_shel!=details.Shell_1):
