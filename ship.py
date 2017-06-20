@@ -1,4 +1,3 @@
-import persona
 import details
 import navigation
 import math
