@@ -1,3 +1,9 @@
+'''
+Файл, отвечающий за картинку и выполняющий непосредственную связь между пользователем и игрой.
+Кнопки определяются через координаты. При каждом клике берется расположение мышки по x и по y, после чего проходит
+проверки и, в случае успеха одной из них, выполняется заданное действие.
+'''
+
 import pygame
 import details
 import persona
@@ -36,10 +42,14 @@ console_show='_'
 pygame.display.set_caption("Курсовая Кондратенко Е.А.")
 
 pos = (0,0,)#координаты клика
+
 button_fly = [[0,65],[0,85]]
 for i in range(8):
     button_fly[0]+=[button_fly[0][-1]+25]
     button_fly[1]+=[button_fly[1][-1]+25]
+    '''
+    Заполнение коорднат кнопок, использующихся в меню навигации
+    '''
 
 #Вывод игрового текста
 font = pygame.font.Font(None,20)
@@ -53,8 +63,8 @@ text_rep_gen = font.render("3. Починить Генератор",True,black)
 
 trm=''
 text_rep_good = font.render(trm,True,black)
-#Переменные текста для окна навигации
 
+#Переменные текста для окна навигации
 text_nav = font.render("Окно Навигации:",True,black)
 text_nav_go = font.render("Полетели!",True,black)
 text_nav_Mer = font.render("1. На Меркурий",True,black)
@@ -69,8 +79,8 @@ text_nav_Nep = font.render("8. На Нептун",True,black)
 
 tnm=''
 text_nav_message=font.render(trm,True,black)
-#Переменные для инфы
 
+#Переменные для инфы
 text_inf_V = font.render('',True,black)
 text_inf_M = font.render('',True,black)
 text_inf_R = font.render('',True,black)
@@ -78,10 +88,12 @@ text_inf_Pl = font.render('',True,black)
 text_inf_Sid = font.render('',True,black)
 text_inf_Sp = font.render('',True,black)
 text_inf_hello = font.render('',True,black)
+
 #Переменные для окна статуса
 text_stat_name = font.render(ship.Marvel.name + ' - имя корабля',True,white)
 text_stat_fuel = font.render("Запас топлива:" + str(ship.Marvel.fuel),True,white)
 text_stat_pzdc = font.render(details.text_pzdc_message,True,black)
+
 #Оставаться в цикле, пока пользователь не нажмёт на кнопку закрытия окна
 done=False
  
